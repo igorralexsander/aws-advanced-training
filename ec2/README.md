@@ -12,7 +12,7 @@ Allow us to manage how instances will be distributed across availability zones
 
 ## EC2 Metadata
 
-All lauched EC2 instances make your metadata availble in http endpoints
+All lauched EC2 instances make your metadata availble in http endpoints [Documentation](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
 
 ### Endpoint
 ```
