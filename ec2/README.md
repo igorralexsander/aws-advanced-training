@@ -40,3 +40,7 @@ All lauched EC2 instances make your metadata availble in http endpoints [Documen
 ## User data
 Add commands to execute on first initialization of the instance.
 User Data for an instance can be modified if it is in stopped state and the root volume is an EBS Volume.
+
+### Spot Intances
+
+Spot blocks can only be used for a span of up to 6 hours.
