@@ -11,6 +11,11 @@ You can use this information to revise your policies. Accordingly.
 You can generate and download a credential report that list all users in your account and the status
 of their various credentials, including passwords, access keys and MFA devices. And not use to review permissions.
 
+## IAM permission boundary
+
+It's only atached to Users and Roles.
+Cannot atached to gorups.
+
 ## Policy Template
 
 ```

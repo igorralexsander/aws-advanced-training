@@ -41,6 +41,10 @@ All lauched EC2 instances make your metadata availble in http endpoints [Documen
 Add commands to execute on first initialization of the instance.
 User Data for an instance can be modified if it is in stopped state and the root volume is an EBS Volume.
 
+By default, scripts entered as user data are executed with root user privileges - Scripts entered as user data are executed as the root user, hence do not need the sudo command in the script. Any files you create will be owned by root; if you need non-root users to have file access, you should modify the permissions accordingly in the script.
+
 ### Spot Intances
 
 Spot blocks can only be used for a span of up to 6 hours.
+
+Always you view `across multiple servers` think about `fleet spot intances, fleet on demand instances` because fleet is similat to set of instances.
