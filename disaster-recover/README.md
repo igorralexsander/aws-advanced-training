@@ -1,5 +1,14 @@
 # AWS Disaster Recover
 
+## RPO
+
+RPO - Recovery Point Objective. Its is the acceptable time for data loss, example:
+Company A accept until uo to 1 hour of data loss in case of a disaster happens.
+
+## RTO
+
+RTO - Recovery Time Objective. After disaster how many minutes, hours, days is acceptable to up the environment, in another region, datacenter, cloudprovider, etc.
+
 ## Strategies
 
 ### Backup & Restore
