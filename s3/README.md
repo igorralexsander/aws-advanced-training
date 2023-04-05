@@ -59,3 +59,26 @@ Move object between S3 Standard and S3 Standard IA.
 | S3 Glacier Instant Retrieval  | milliseconds      |
 | S3 Glacier Flexible Retrieval | minutes or hours  |
 | S3 Glacier Deep Archive       | hours             |
+
+
+## URLs
+
+Bucket name id: `my-super-bucket` valid urls are:
+* `https://my-super-bucket.s3.us-east-1.amazonaws.com`
+* `https://s3.us-east-1.amazonaws.com/my-super-bucket`
+
+## Static Web Site URLs
+
+http://bucket-name.s3-website.Region.amazonaws.com
+
+http://bucket-name.s3-website-Region.amazonaws.com
+
+## Object size
+
+* Minimum is 0 Bytes
+* Maximum is 5 Terabytes
+
+## Event Notification
+
+Only SQS Standard queue is allowed, SQS FIFO is not allowed.
+
