@@ -82,3 +82,22 @@ http://bucket-name.s3-website-Region.amazonaws.com
 
 Only SQS Standard queue is allowed, SQS FIFO is not allowed.
 
+## Byte Range Request
+
+Using the Range HTTP header in a GET Object request, you can fetch a byte-range from an object, transferring only the specified portion. You can use concurrent connections to Amazon S3 to fetch different byte ranges from within the same object. This helps you achieve higher aggregate throughput versus a single whole-object request. Fetching smaller ranges of a large object also allows your application to improve retry times when requests are interrupted.
+
+## Object Lock
+
+Before you lock any objects, you have to enable a bucket to use S3 Object Lock. You enable Object Lock when you create a bucket. After you enable Object Lock on a bucket, you can lock objects in that bucket. When you create a bucket with Object Lock enabled, you can’t disable Object Lock or suspend versioning for that bucket.
+
+### Governance mode
+
+Objects can be unlocked by users with special permissions.
+
+### Compliance mode
+
+Once an object is locked by compliance mode, this object remains locked until retention period end. Both regular users and root user can unlock this object.
+
+### Legal hold
+
+Lock object without retention period, any user can atach legal hold in an object.

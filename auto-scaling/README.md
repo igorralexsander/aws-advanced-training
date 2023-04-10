@@ -16,4 +16,12 @@ Used on autoscaling and direct launches in ec2 console.
 
 ## Launch Configuration
 
-Used only autoscaling
+Used only autoscaling.
+
+## Rebalancing activity
+
+When rebalancing, Amazon EC2 Auto Scaling launches new instances before terminating the old ones, so that rebalancing does not compromise the performance or availability of your application. Therefore, this option is correct.
+
+## Scaling activity
+
+However, the `scaling activity` of Auto Scaling works in a different sequence compared to the rebalancing activity. Auto Scaling creates a new scaling activity for terminating the unhealthy instance and then terminates it. Later, another scaling activity launches a new instance to replace the terminated instance.

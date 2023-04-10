@@ -38,6 +38,7 @@ All lauched EC2 instances make your metadata availble in http endpoints [Documen
 
 
 ## User data
+
 Add commands to execute on first initialization of the instance.
 User Data for an instance can be modified if it is in stopped state and the root volume is an EBS Volume.
 
@@ -45,6 +46,14 @@ By default, scripts entered as user data are executed with root user privileges 
 
 ### Spot Intances
 
+Spot Instances with a defined duration `(also known as Spot blocks)` are designed not to be interrupted and will run continuously for the duration you select. This makes them ideal for jobs that take a finite time to complete, such as batch processing, encoding and rendering, modeling and analysis, and continuous integration.
+
 Spot blocks can only be used for a span of up to 6 hours.
 
 Always you view `across multiple servers` think about `fleet spot intances, fleet on demand instances` because fleet is similat to set of instances.
+
+## EBS Delete on termination
+
+Set the DeleteOnTermination attribute to False using the command line - If the instance is already running, you can set DeleteOnTermination to False using the command line.
+
+You can set the DeleteOnTermination attribute to False when you launch a new instance. It is not possible to update this attribute of a running instance from the AWS console.
