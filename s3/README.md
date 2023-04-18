@@ -77,6 +77,12 @@ http://bucket-name.s3-website-Region.amazonaws.com
 
 * Minimum is 0 Bytes
 * Maximum is 5 Terabytes
+* Maximum is 5 Terabytes via CLI
+
+## Performance
+
+You can get the first byte of file in 100-200 ms latency. 
+You can also achieve a high number of requests: 3500 `PUT/COPY/POST/DELETE` and 5500 `GET/HEAD` requests per second per prefix.
 
 ## Event Notification
 
@@ -89,6 +95,7 @@ Using the Range HTTP header in a GET Object request, you can fetch a byte-range 
 ## Object Lock
 
 Before you lock any objects, you have to enable a bucket to use S3 Object Lock. You enable Object Lock when you create a bucket. After you enable Object Lock on a bucket, you can lock objects in that bucket. When you create a bucket with Object Lock enabled, you can’t disable Object Lock or suspend versioning for that bucket.
+The lock is done in version of file.
 
 ### Governance mode
 
@@ -96,7 +103,7 @@ Objects can be unlocked by users with special permissions.
 
 ### Compliance mode
 
-Once an object is locked by compliance mode, this object remains locked until retention period end. Both regular users and root user can unlock this object.
+Once an object is locked by compliance mode, this object remains locked until retention period end. Both regular users and root user can't unlock this object.
 
 ### Legal hold
 
