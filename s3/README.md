@@ -108,3 +108,34 @@ Once an object is locked by compliance mode, this object remains locked until re
 ### Legal hold
 
 Lock object without retention period, any user can atach legal hold in an object.
+
+## Encryption
+
+* The entity tag (ETag) in the response is not MD5 hash of the object data.
+
+If your bucket is versioning-enabled, each object version that you upload by using this feature can have its own encryotion key. You are responsible for tracking which encryption key was used for which object version.
+
+## SSE-KMS
+
+* If you specify the `x-amz-server-side-encryption:aws:kms` header but don't provide the `x-amz-server-side-encryption-aws-kms-key-id` header, Amazon S3 uses the AWS managed key (aws/s3) to protect the data.
+
+|Header|Description|
+|--|--|
+|`x-amz-server-side-encryption`| `aws:kms`|
+|`x-amz-server-side-encryption-aws-kms-key-id`|Key ARN|
+|`x-amz-server-side-encryption-context`||
+|`x-amz-server-side-encryption-context`||
+
+
+
+## SSE-C (Server Side Encryption with customer provided keys)
+
+* You cannot use the Amazon S3 console to upload an object and request SSE-C. You also cannot use the console to update (for example, change the storage class or add metadata) an existing object stored using SSE-C.
+
+### Required headers
+
+|Header|Description|
+|--|--|
+|`x-amz-server-side-encryption-customer-algorithm`|Use this header to specify the encryption algorithm. The header value must be AES256.|
+|`x-amz-server-side-encryption-customer-key`|Use this header to provide the 256-bit, base64-encoded encryption key for Amazon S3 to use to encrypt or decrypt your data.|
+|`x-amz-server-side-encryption-customer-key-MD5`|Use this header to provide the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.|
