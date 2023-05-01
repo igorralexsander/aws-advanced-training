@@ -86,7 +86,7 @@ You can also achieve a high number of requests: 3500 `PUT/COPY/POST/DELETE` and 
 
 ## Event Notification
 
-Only SQS Standard queue is allowed, SQS FIFO is not allowed.
+Only SQS or SNS Standard queue is allowed, SQS, SNS FIFO is not allowed.
 
 ## Byte Range Request
 

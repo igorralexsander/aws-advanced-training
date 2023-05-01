@@ -1,5 +1,10 @@
 # AWS S3 GLACIER
 
+## Upload data
+
+Only CLI or SDKs, its not possible uploads to glacier via Console
+
+
 ## Archive retrieval options
 
 When you need retrieve some files from S3 Glacier, you can set `Tier` param on initiate job request. You can choose following options:
