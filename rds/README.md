@@ -1,5 +1,8 @@
 # AWS RDS
 
+* You cannot disable automated backups
+
+
 ## Multi AZ Maintenance
 
 RDS applies OS updates by performing maintenance on the standby, then promoting the standby to primary and finnaly performing maintenance on the old primary which becomes the new standby.

@@ -109,6 +109,17 @@ Once an object is locked by compliance mode, this object remains locked until re
 
 Lock object without retention period, any user can atach legal hold in an object.
 
+## Lifecycle transitions
+
+Amazon S3 does not support any of the following lifecycle transitions.
+
+You can't transition from the following:
+
+* Any storage class to the S3 Standard storage class.
+* Any storage class to the reduced redundancy storage class.
+* The S3 intelligent-tiering storage class to the s3 standard-IA storage class.
+* The S3 One-Zone-IA storage class to the S3 Intelligent-Tiering, S3 Standard-IA, or S3 Glacier Instant Retrieval storage classes.
+
 ## Encryption
 
 * The entity tag (ETag) in the response is not MD5 hash of the object data.
