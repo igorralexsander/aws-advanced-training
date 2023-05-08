@@ -18,7 +18,7 @@ Cannot atached to gorups.
 
 ## Policy Template
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": {
@@ -32,7 +32,7 @@ Cannot atached to gorups.
 }
 ```
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": {
