@@ -57,3 +57,7 @@ Always you view `across multiple servers` think about `fleet spot intances, flee
 Set the DeleteOnTermination attribute to False using the command line - If the instance is already running, you can set DeleteOnTermination to False using the command line.
 
 You can set the DeleteOnTermination attribute to False when you launch a new instance. It is not possible to update this attribute of a running instance from the AWS console.
+
+## ENI Atach
+
+Best practices for configuring network interfaces You can attach a network interface to an instance when it's running (hot attach), when it's stopped (warm attach), or when the instance is being launched (cold attach).
