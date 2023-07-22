@@ -14,7 +14,7 @@ of their various credentials, including passwords, access keys and MFA devices. 
 ## IAM permission boundary
 
 It's only atached to Users and Roles.
-Cannot atached to gorups.
+Cannot atached to groups.
 
 ## Policy Template
 
